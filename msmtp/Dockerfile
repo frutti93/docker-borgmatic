@@ -1,4 +1,4 @@
-FROM frutti93/borgmatic:1.1.15-1.5.12
+FROM frutti93/borgmatic:latest
 LABEL mainainer='frutti93'
 COPY entry.sh /entry.sh
 RUN apk upgrade --no-cache \
