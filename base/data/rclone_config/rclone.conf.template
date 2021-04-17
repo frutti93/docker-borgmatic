@@ -1,0 +1,7 @@
+[test]
+type = s3
+provider = Wasabi
+access_key_id = YourAccessID
+secret_access_key = YourAccessKey
+endpoint = s3.eu-central-1.wasabisys.com
+
