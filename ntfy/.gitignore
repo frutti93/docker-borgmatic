@@ -1,8 +1,0 @@
-data/.cache/
-data/.config/
-data/.ssh/
-data/repository/
-.env
-msmtp.env
-crontab.txt
-config.yaml
