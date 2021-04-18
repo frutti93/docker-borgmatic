@@ -18,8 +18,6 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Code"
-          files: |
-            *
 
   docker:
     runs-on: ubuntu-latest
