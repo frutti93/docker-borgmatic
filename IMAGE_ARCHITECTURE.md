@@ -24,6 +24,7 @@ docker-borgmatic/
 │   ├── Dockerfile                     # FROM frutti93/borgmatic:${VERSION}
 │   ├── entry.sh                       # starts msmtp in addition
 │   ├── .env
+│   ├── msmtp.env                      # msmtp environment variables
 │   └── README.md                      # describes specifics only
 ├── ntfy
 │   ├── data
