@@ -5,3 +5,4 @@ data/repository/
 .env
 msmtp.env
 crontab.txt
+config.yaml

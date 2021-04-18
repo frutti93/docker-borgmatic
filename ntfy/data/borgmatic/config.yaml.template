@@ -30,6 +30,7 @@ hooks:
     before_backup:
         - echo "Starting a backup job."
     after_backup:
+        # - rclone sync /mnt/borg-repository ${RCLONE_TARGET} --fast-list --stats-log-level NOTICE --stats-one-line
         - echo "Backup created."
     on_error:
         - echo "Error while creating a backup."

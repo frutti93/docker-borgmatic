@@ -1,17 +1,17 @@
 version: '3'
 services:
   borgmatic:
-    #image: frutti93/borgmatic
-    build: .
+    image: frutti93/borgmatic
+    # build: .
     container_name: borgmatic
     volumes:
       - ${VOLUME_SOURCE}:/mnt/source:ro           # backup source
       - ${VOLUME_TARGET}:/mnt/borg-repository     # backup target
-      - ${RCLONE_CONFIG}:/mnt/rclone_config
       - ${VOLUME_ETC_BORGMATIC}:/etc/borgmatic.d/ # borgmatic config file(s) + crontab.txt
       - ${VOLUME_BORG_CONFIG}:/root/.config/borg  # config and keyfiles
       - ${VOLUME_SSH}:/root/.ssh                  # ssh key for remote repositories
       - ${VOLUME_BORG_CACHE}:/root/.cache/borg    # checksums used for deduplication
+      - ${RCLONE_CONFIG}:/mnt/rclone_config       # Rclone config directory
     environment:
       - TZ=${TZ}
       - BORG_PASSPHRASE=${BORG_PASSPHRASE}
