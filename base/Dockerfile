@@ -20,10 +20,23 @@ RUN pip3 install --upgrade pip \
     && pip3 install --upgrade borgbackup==${BORG_VERSION} \
     && pip3 install --upgrade borgmatic==${BORGMATIC_VERSION} \
     && pip3 install --upgrade llfuse==${LLFUSE_VERSION}
-RUN cd /tmp \
-    && wget -q https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-amd64.zip \
+
+RUN ARCH=`uname -m` && \
+    if [ "$ARCH" == "x86_64" ]; then \
+        ARCHITECTURE="amd64"; \
+    elif [ "$ARCH" == "aarch64" ]; then \
+        ARCHITECTURE="arm64"; \
+    elif [ "$ARCH" == "armv7l" ]; then \
+        ARCHITECTURE="arm-v7"; \
+    elif [ "$ARCH" == "armv6l" ]; then \
+        ARCHITECTURE="arm"; \
+    else \
+       echo "unknown arch"; \
+    fi \
+    && cd /tmp \
+    && wget -q https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-${ARCHITECTURE}.zip \
     && unzip -q rclone*.zip \
-    && cd rclone-*-linux-amd64 \
+    && cd rclone-*-linux-${ARCHITECTURE} \
     && cp rclone /usr/bin \
     && chmod 755 /usr/bin/rclone
 
