@@ -17,6 +17,7 @@ RUN apk upgrade --no-cache \
     attr-dev \
     py3-wheel 
 RUN ARCH=`uname -m` && \
+    echo ${ARCH} &&\
     if [ "$ARCH" == "x86_64" ]; then \
         ARCHITECTURE="amd64"; \
     elif [ "$ARCH" == "aarch64" ]; then \
