@@ -16,11 +16,6 @@ RUN apk upgrade --no-cache \
     fuse-dev \
     attr-dev \
     py3-wheel 
-RUN pip3 install --upgrade pip \
-    && pip3 install --upgrade borgbackup==${BORG_VERSION} \
-    && pip3 install --upgrade borgmatic==${BORGMATIC_VERSION} \
-    && pip3 install --upgrade llfuse==${LLFUSE_VERSION}
-
 RUN ARCH=`uname -m` && \
     if [ "$ARCH" == "x86_64" ]; then \
         ARCHITECTURE="amd64"; \
@@ -33,12 +28,18 @@ RUN ARCH=`uname -m` && \
     else \
        echo "unknown arch"; \
     fi \
+    && echo ${ARCHITECTURE} \
     && cd /tmp \
     && wget -q https://downloads.rclone.org/${RCLONE_VERSION}/rclone-${RCLONE_VERSION}-linux-${ARCHITECTURE}.zip \
     && unzip -q rclone*.zip \
     && cd rclone-*-linux-${ARCHITECTURE} \
     && cp rclone /usr/bin \
     && chmod 755 /usr/bin/rclone
+RUN pip3 install --upgrade pip \
+    && pip3 install --upgrade borgbackup==${BORG_VERSION} \
+    && pip3 install --upgrade borgmatic==${BORGMATIC_VERSION} \
+    && pip3 install --upgrade llfuse==${LLFUSE_VERSION}
+
 
 FROM alpine:latest
 LABEL mainainer='frutti93'
