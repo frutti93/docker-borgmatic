@@ -1,6 +1,5 @@
 # Borgmatic Container
 <img src="https://github.com/witten/borgmatic/raw/master/docs/static/borgmatic.png" />
-^
 <img src="https://img.shields.io/docker/pulls/frutti93/borgmatic.svg" />
 
 ### Description
