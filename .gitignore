@@ -1,9 +1,11 @@
-data/.cache/
-data/.config/
-data/.ssh/
-data/repository/
+.cache/
+.config/
+.ssh/
+repository/
 msmtp.env
+borgconfig
 .env
 crontab.txt
 config.yaml
+Testdata
 
