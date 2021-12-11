@@ -1,5 +1,9 @@
 # Borgmatic Container
-<img src="https://img.shields.io/github/stars/frutti93/docker-borgmatic" /> <img src="https://img.shields.io/docker/stars/frutti93/borgmatic" /> <img src="https://img.shields.io/docker/pulls/frutti93/borgmatic" /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/frutti93/docker-borgmatic/build%20latest"> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/frutti93/docker-borgmatic/build%20tagged">
+![](https://img.shields.io/github/stars/frutti93/docker-borgmatic)
+[![](https://img.shields.io/docker/stars/frutti93/borgmatic?link=https://hub.docker.com/r/frutti93/borgmatic)](https://img.shields.io/docker/stars/frutti93/borgmatic?link=https://hub.docker.com/r/frutti93/borgmatic&link=https://hub.docker.com/r/frutti93/borgmatic)
+[![](https://img.shields.io/docker/pulls/frutti93/borgmatic?link=https://hub.docker.com/r/frutti93/borgmatic)](https://img.shields.io/docker/pulls/frutti93/borgmatic?link=https://hub.docker.com/r/frutti93/borgmatic&link=https://hub.docker.com/r/frutti93/borgmatic)
+![](https://img.shields.io/github/workflow/status/frutti93/docker-borgmatic/build%20latest)
+![](https://img.shields.io/github/workflow/status/frutti93/docker-borgmatic/build%20tagged)
 
 ## Description
 This is a fork of [docker-borgmatic](https://github.com/b3vis/docker-borgmatic) by [b3vis](https://github.com/b3vis) providing multiarch builds on DockerHub.

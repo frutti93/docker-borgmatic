@@ -13,5 +13,5 @@ RUN apk upgrade --no-cache \
 FROM frutti93/borgmatic:latest
 LABEL mainainer='frutti93'
 VOLUME /root/.config/ntfy
-COPY --from=builder /usr/lib/python3.8/site-packages /usr/lib/python3.8/
+COPY --from=builder /usr/lib/python3.9/site-packages /usr/lib/python3.9/
 COPY --from=builder /usr/bin/ntfy /usr/bin/
