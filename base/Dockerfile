@@ -1,9 +1,9 @@
 FROM alpine:3.15 as builder
 LABEL mainainer='frutti93'
-ARG BORG_VERSION=1.1.17
-ARG BORGMATIC_VERSION=1.5.21
-ARG RCLONE_VERSION=v1.57.0
-ARG LLFUSE_VERSION=1.4.1
+ARG BORG_VERSION=1.2.1
+ARG BORGMATIC_VERSION=1.6.6
+ARG RCLONE_VERSION=v1.59.1
+ARG LLFUSE_VERSION=1.4.2
 RUN apk upgrade --no-cache \
     && apk add --no-cache \
     alpine-sdk \
@@ -69,8 +69,8 @@ VOLUME /root/.config/borg
 VOLUME /mnt/rclone_config
 VOLUME /root/.ssh
 VOLUME /root/.cache/borg
-COPY --from=builder /usr/lib/python3.9/site-packages \
-                    /usr/lib/python3.9/
+COPY --from=builder /usr/lib/python3.10/site-packages \
+                    /usr/lib/python3.10/
 COPY --from=builder /usr/bin/borg \
                     /usr/bin/borgfs \
                     /usr/bin/borgmatic \
