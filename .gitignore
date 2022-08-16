@@ -1,7 +1,7 @@
-.cache/
-.config/
-.ssh/
-repository/
+base/data/.cache/
+base/data/.config/
+base/data/.ssh/
+base/data/repository/
 msmtp.env
 borgconfig
 .env
