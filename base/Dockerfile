@@ -1,4 +1,4 @@
-FROM alpine:3.15 as builder
+FROM alpine:3.16 as builder
 LABEL mainainer='frutti93'
 ARG BORG_VERSION=1.2.1
 ARG BORGMATIC_VERSION=1.6.6
@@ -43,7 +43,7 @@ RUN pip3 install --upgrade pip \
     llfuse==${LLFUSE_VERSION}
 
 
-FROM alpine:3.15
+FROM alpine:3.16
 LABEL mainainer='frutti93'
 COPY entry.sh /entry.sh
 RUN apk upgrade --no-cache \
