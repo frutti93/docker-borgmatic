@@ -8,7 +8,7 @@ RUN apk upgrade --no-cache \
     openssl-dev \
     libffi-dev \
     && pip3 install --upgrade pip \
-    && pip3 install --upgrade ntfy[pid,emoji,xmpp,telegram,instapush,slack,rocketchat]
+    && pip3 install --upgrade ntfy[pid,emoji,telegram,instapush,slack,rocketchat]
 
 FROM frutti93/borgmatic:latest
 LABEL mainainer='frutti93'
